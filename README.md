@@ -1,2 +1,2 @@
 # notifynfe
-Notificações por e-mail do porta NF-e
+Notificações por e-mail do portal da NF-e
