@@ -51,25 +51,21 @@ $msg =  $response[1];
 $msg = str_replace('href="', 'href="'.$link.'/', $msg);
 $msg = quebra($msg,'divHlkInformes',' <div id="divDenegacao">');
 $msg = quebra($msg,'<p>','</br>');
-echo $head.$aviso.$msg;
-
-die();
 
 
 
-
-// O remetente deve ser um e-mail do seu domínio conforme determina a RFC 822.
+// O remetente deve ser um e-mail do seu domÃ­nio conforme determina a RFC 822.
 // O return-path deve ser ser o mesmo e-mail do remetente.
 $headers = "MIME-Version: 1.1\r\n";
 $headers .= "Content-type: text/plain; charset=UTF-8\r\n";
-$headers .= "From: notify@anibaltec.com.br\r\n"; // remetente
-$headers .= "Return-Path: notify@anibaltec.com.br\r\n"; // return-path
-$envio = mail("wellingtonfonseca@anibaltec.com.br", "Informe Receita", $head.$aviso.$msg, $headers);
+$headers .= "From: notify@mail.com.br\r\n"; // remetente
+$headers .= "Return-Path: notify@mail.com.br\r\n"; // return-path
+$envio = mail("wellingtonfonseca@cw2gisoedagen.com.br", "Informe Receita", $head.$aviso.$msg, $headers);
  
 if($envio)
  echo "Mensagem enviada com sucesso";
 else
- echo "A mensagem não pode ser enviada";
+ echo "A mensagem nÃ£o pode ser enviada";
 
 
 ?>
